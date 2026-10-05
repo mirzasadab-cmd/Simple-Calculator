@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <meta name="description" content="A clean, professional, and responsive basic calculator for addition, subtraction, multiplication, and division.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Section -->
+    <header class="page-header">
+      <h1 class="page-title">Basic Calculator</h1>
+      <p class="page-subtitle">Perform basic mathematical operations quickly and easily.</p>
+    </header>
+
+    <!-- Main Calculator Container -->
+    <main class="calculator-wrapper">
+      <div class="calculator-card" role="region" aria-label="Basic Calculator">
+        <!-- Display Area -->
+        <div class="display-container">
+          <div id="previous-display" class="previous-display" aria-hidden="true"></div>
+          <div class="main-display-row">
+            <input
+              type="text"
+              id="display"
+              class="calculator-display"
+              placeholder="0"
+              autocomplete="off"
+              spellcheck="false"
+              inputmode="decimal"
+              aria-label="Calculator display and input"
+            />
+          </div>
+        </div>
+
+        <!-- Buttons Grid -->
+        <div class="button-grid" role="group" aria-label="Calculator keypad">
+          <!-- Row 1 -->
+          <button type="button" class="btn btn-action" id="btn-clear" aria-label="Clear all">AC</button>
+          <button type="button" class="btn btn-action" id="btn-backspace" aria-label="Backspace">⌫</button>
+          <button type="button" class="btn btn-operator" data-operator="÷" aria-label="Division">÷</button>
+          <button type="button" class="btn btn-operator" data-operator="×" aria-label="Multiplication">×</button>
+
+          <!-- Row 2 -->
+          <button type="button" class="btn btn-number" data-number="7" aria-label="7">7</button>
+          <button type="button" class="btn btn-number" data-number="8" aria-label="8">8</button>
+          <button type="button" class="btn btn-number" data-number="9" aria-label="9">9</button>
+          <button type="button" class="btn btn-operator" data-operator="−" aria-label="Subtraction">−</button>
+
+          <!-- Row 3 -->
+          <button type="button" class="btn btn-number" data-number="4" aria-label="4">4</button>
+          <button type="button" class="btn btn-number" data-number="5" aria-label="5">5</button>
+          <button type="button" class="btn btn-number" data-number="6" aria-label="6">6</button>
+          <button type="button" class="btn btn-operator" data-operator="+" aria-label="Addition">+</button>
+
+          <!-- Row 4 -->
+          <button type="button" class="btn btn-number" data-number="1" aria-label="1">1</button>
+          <button type="button" class="btn btn-number" data-number="2" aria-label="2">2</button>
+          <button type="button" class="btn btn-number" data-number="3" aria-label="3">3</button>
+          <button type="button" class="btn btn-number" id="btn-decimal" data-decimal="." aria-label="Decimal point">.</button>
+
+          <!-- Row 5 -->
+          <button type="button" class="btn btn-number btn-zero" data-number="0" aria-label="0">0</button>
+          <button type="button" class="btn btn-equals" id="btn-equals" aria-label="Equals">=</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="page-footer">
+      <p>Built with HTML, CSS &amp; JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
